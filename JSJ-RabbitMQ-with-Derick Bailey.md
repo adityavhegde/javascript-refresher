@@ -36,3 +36,5 @@ References
 https://devchat.tv/js-jabber/170-jsj-rabbitmq-with-derick-bailey/
 
 https://stackoverflow.com/questions/6636213/rabbitmq-vs-socket-io
+
+[How slack works](https://www.youtube.com/watch?v=WE9c9AZe-DY])
