@@ -1,4 +1,4 @@
-* What kind of things you want to have asynchronously with a web request ? *
+What kind of things you want to have asynchronously with a web request ?
 - sending an email 
 
 Why do we care 
@@ -31,7 +31,8 @@ RabbitMQ v/s websocket
 task queue vs message queue 
 
 
-Reference
+References
 ------------------
 https://devchat.tv/js-jabber/170-jsj-rabbitmq-with-derick-bailey/
+
 https://stackoverflow.com/questions/6636213/rabbitmq-vs-socket-io
