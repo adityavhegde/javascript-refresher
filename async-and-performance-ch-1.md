@@ -18,3 +18,7 @@ Side note about XMLHttpRequest:
 Back in the days when browsers were competing to make their static HTML interactive, Microsoft added this API to their browser (Internet Explorer). This API allowed asyncronous calls to be made to the server without having to refresh the webpage. Sooner all the browsers followed suit and added this functionality. This is the birth of AJAX, which unlike today wasn't JSON based (XML rather).
 
 The saner way to do AJAX today is using the fetch API. Again this is provided by the browser and implemented by the browser as dictated in the ECMAScript specification.
+
+Fetch API is different than XHR. Responses from XHR are buffered in memory wherease the fetch API responses are available as low level streams. XHR lacks streaming. You can get access to .responseText while the request is in progress, but the whole response is still going to buffer into memory [1].
+
+[1] https://jakearchibald.com/2015/thats-so-fetch/
