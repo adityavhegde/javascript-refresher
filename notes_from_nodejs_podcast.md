@@ -49,3 +49,6 @@ Nodejs also supports the **Isomorphic application** model where the data models 
 
 All in all Nodejs represents a need for modern applications and therefore many companies seem to be adopting it.
 
+## References 
+1. https://www.se-radio.net/2015/06/episode-230-shubhra-khar-on-nodejs/
+
