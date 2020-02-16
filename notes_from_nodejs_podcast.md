@@ -14,32 +14,32 @@ So if you have credit card processing happening in the background, the response 
 
 Coming back to the main point, this still is a good win, since the request can continue doing what it can while the Async task has been offloaded to a queue. If your Async task requires a lot of Promise chaining then it may take a while to serve the result back. However, **the server process is still free to handle other requests**
 
-### Comparissons to Thread Pool based model
+## Comparissons to Thread Pool based model
 
 In a traditional Java/C# land, to handle so many requests, you spawn say 1024 thread pool and each of these will handle the requests. This doesn't scale well if you have too many Requests Per Second and each request blocks the **handling thread** for a long time.
 
-### Comparissons to Erlang/Elixir Process 
+## Comparissons to Erlang/Elixir Process 
 
 I think Erlang Processes can fundamentally beat what Nodejs really offers since we can spawn 100,000 of Elixir Processes so cheaply to be able to handle web requests. If I were to do a Benchmark, I think Elixir in theory could beat Nodejs. But I think practically Nodejs serves other use cases besides just building a **CRUD website**
 
-### JSON handling
+## JSON handling
 
 Typical handling of JSON that involves parsing and then treating that JSON data through layers of ORM introduces Latency to the application. This might be visible in say Mobile devices. 
 
 if you imagine a stack where you have Nodejs and **MongoDB** as your data store, you have an end to end javascript based system. Fundamentally the **Data Model** on both the Client and Server side being the same, you can achieve some pretty big wins.
 
 
-### Implications to Mobile and Other Resource Constrained Edges
+## Implications to Mobile and Other Resource Constrained Edges
 
 
 
-### Support to Legacy Systems | Microservices 
+## Support to Legacy Systems | Microservices 
 
 
-### Limitations
+## Limitations
 
 
-### Summary 
+## Summary 
 
 With Nodejs based applications, one must think of modern evolutions, such as the Ubiquity of Mobile Devices and emergence of edge based IoT devices, which don't need traditional heavy Java and Relational database based systems. Concerns like **offline caching** and **memory consumption** are really important for these kind of use cases.
 
