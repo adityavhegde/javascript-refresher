@@ -1,3 +1,5 @@
+## Overview
+
 Concepts of Nodejs' **Event Loop** aren't all that new and in the Posix world have existed for a long time. The idea is to act like a delegator for requests when you get them, so that request handling process can be unblocked. 
 
 Nodejs callback based mechanism is handled at a low level by the libuv library which on a higher level use the **Select** and **Poll** system calls to listen to several File Descriptor changes and thereby react quickly to events in an Asychronous manner. This is nothing new though and some of the greatest wins come from **being able to use native JSON** at both Client and Server sides. From the APUE book, Sockets are also created like standard files and you get a File Descriptor. I think this ability allows Nodejs to handle multiple **Socket Connections** too which make it suitable for the Web RTC use cases.
