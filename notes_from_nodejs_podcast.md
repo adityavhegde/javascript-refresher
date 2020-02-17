@@ -1,6 +1,6 @@
 Concepts of Nodejs' **Event Loop** aren't all that new and in the Posix world have existed for a long time. The idea is to act like a delegator for requests when you get them, so that request handling process can be unblocked. 
 
-Nodejs callback based mechanism is handled at a low level by the libuv library which on a higher level use the **Select** and **Poll** system calls to listen to several File Descriptor changes and thereby react quickly to events in an Asychronous manner. This is nothing new though and some of the greatest wins come from ** being able to use native JSON ** at both Client and Server sides. From the APUE book, Sockets are also created like standard files and you get a File Descriptor. I think this ability allows Nodejs to handle multiple **Socket Connections** too which make it suitable for the Web RTC use cases.
+Nodejs callback based mechanism is handled at a low level by the libuv library which on a higher level use the **Select** and **Poll** system calls to listen to several File Descriptor changes and thereby react quickly to events in an Asychronous manner. This is nothing new though and some of the greatest wins come from **being able to use native JSON** at both Client and Server sides. From the APUE book, Sockets are also created like standard files and you get a File Descriptor. I think this ability allows Nodejs to handle multiple **Socket Connections** too which make it suitable for the Web RTC use cases.
 
 Nodejs is therefore very good where you have a great deal of I/O going on. I don't really appreaciate the nitty gritty of this since I don't really understand the volume of I/O that a typical web request has to make. But I guess this consistutes disk reads, network I/O (REST API calls) or database calls etc.
 
@@ -31,13 +31,15 @@ if you imagine a stack where you have Nodejs and **MongoDB** as your data store,
 
 ## Implications to Mobile and Other Resource Constrained Edges
 
+The web world has changed in the presence of Mobile devices. What you have is apps running on the Client sending several events to the server or rather an API constantly. These could be scroll events etc. There is also the need to cache/offline data for the Client and sync it back when the Client is online. With an Isomorphic code base, the Client and Server's data models are identical and can therefore be exchanged. This is one of the use cases of Nodejs.
 
+Also a typical SOAP request may take seconds to respond back which is too slow in the Mobile and Edge computing world.
 
-## Support to Legacy Systems | Microservices 
-
+There are tools like Browserify that deal with this Client/Server data model. It doesn't make the Client fat, but helps store the Server models at Client.
 
 ## Limitations
 
+Immature transaction handling
 
 ## Summary 
 
