@@ -53,4 +53,5 @@ All in all Nodejs represents a need for modern applications and therefore many c
 
 ## References 
 1. https://www.se-radio.net/2015/06/episode-230-shubhra-khar-on-nodejs/
+2. https://nolanlawson.com/2017/05/22/a-brief-and-incomplete-history-of-javascript-bundlers/
 
