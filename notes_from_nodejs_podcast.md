@@ -43,6 +43,12 @@ There are tools like Browserify that deal with this Client/Server data model. It
 
 Immature transaction handling
 
+## Personal Comments 
+
+Having done some Async I/O, I feel it is a terrible way to program. Even if the programmer understands what they've done with the Promises, the code is difficult to read and reason about, let alone test. It gets fairly complicated when you have to do a lof API calls that are successively related to each other. Promises make it less terrible than callbacks, but it is a loss of productivity for the programmer. As programmers, we make business by writing code once and maintaining it with relative ease and I don't see the Async I/O based programming model scaling to complicated code base with several developers on it. 
+
+Programming is intuitive when you write code as a sequence of steps. Async I/O is an antipattern. There might be cases where Async I/O is a good use, but putting your entire code base in an Async paradigm seems like a bad idea.
+
 ## Summary 
 
 With Nodejs based applications, one must think of modern evolutions, such as the Ubiquity of Mobile Devices and emergence of edge based IoT devices, which don't need traditional heavy Java and Relational database based systems. Concerns like **offline caching** and **memory consumption** are really important for these kind of use cases.
