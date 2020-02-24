@@ -12,7 +12,7 @@ funct _A() {
 
 ``` javascript
 func _B() {
- // similar to Promise A but is waiting on some value that A has set in the global scope 
+ // similar to Promise A but dependent on some value that A's resolution has set in the global scope 
 }
 ```
 
